@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { List, X, ArrowCircleUpRight, WhatsappLogo, InstagramLogo, ArrowArcRight, Star } from "@phosphor-icons/react";
+import { List, X, ArrowCircleUpRight, Star } from "@phosphor-icons/react";
 import "./index.css"
 import Button from "./components/ButtonWhatsapp";
 import Card from "./components/Card";
@@ -12,7 +12,7 @@ import { Autoplay, Pagination, Scrollbar } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import 'swiper/css/pagination';
-import 'swiper/css/autoplay'
+import 'swiper/css/autoplay';
 
 
 type CardRequiredProps = {
@@ -22,10 +22,6 @@ type CardRequiredProps = {
   description: string;
   stars?: number;
   variant?: 'pemesanan' | 'kelebihan' | 'review';
-}
-
-type CardsProps = {
-  item: CardRequiredProps;
 }
 
 // mock data kelebihan save rental
@@ -475,7 +471,7 @@ function InfoCard({ id, title, description, img, variant, stars }: CardRequiredP
         <p>{description}</p>
         <img src={img} alt="" />
         <h3>{title}</h3>
-        <div className="card-stars">{typeof stars === 'number' && Array.from({ length: stars }).map((count, i) => (
+        <div className="card-stars">{typeof stars === 'number' && Array.from({ length: stars }).map((_, i) => (
           <Star weight="fill" color="#F77F00" key={i} size={16} />
         ))}</div>
       </>)}
