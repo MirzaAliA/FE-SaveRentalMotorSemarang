@@ -6,11 +6,13 @@ import Card from "./components/Card";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Scrollbar } from 'swiper/modules';
+import { Autoplay, Pagination, Scrollbar } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/scrollbar';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay'
 
 
 type CardRequiredProps = {
@@ -18,6 +20,7 @@ type CardRequiredProps = {
   img: string;
   title: string;
   description: string;
+  stars?: number;
   variant?: 'pemesanan' | 'kelebihan' | 'review';
 }
 
@@ -81,19 +84,22 @@ const dataReviewPelanggan: CardRequiredProps[] = [
     id: 1,
     title: 'Andi Fajar',
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    img: 'AndiFajar.jpg'
+    img: 'AndiFajar.jpg',
+    stars: 5,
   },
   {
     id: 2,
     title: 'Joko Susanto',
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    img: 'JokoSusanto.jpg'
+    img: 'JokoSusanto.jpg',
+    stars: 5,
   },
   {
     id: 3,
     title: 'Franklin Amotey',
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    img: 'FranklinAmotey.jpg'
+    description: "when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    img: 'FranklinAmotey.jpg',
+    stars: 4,
   }
 ]
 
@@ -306,13 +312,14 @@ function ContentKelebihan() {
           <Swiper
             modules={[Scrollbar]}
             scrollbar={{ draggable: true }}
+            className="swiper-kelebihan"
             breakpoints={{
               0: {
-                slidesPerView: 1,
+                slidesPerView: 0.5,
                 spaceBetween: 40
               },
               320: {
-                slidesPerView: 1.2,
+                slidesPerView: 1,
                 spaceBetween: 40
               },
               540: {
@@ -379,7 +386,7 @@ function ContentProsesPemesanan() {
           ))}
         </div>
         <a href="">
-          <h3 className="button-syaratketentuan">
+          <h3 className="button-link button-syaratketentuan">
             Syarat dan Ketentuan Rental <ArrowCircleUpRight size={16} />
           </h3>
         </a>
@@ -392,28 +399,85 @@ function ContentProsesPemesanan() {
 function ContentReview() {
   return (
     <>
-      <div className="review">
+      <div className="review-lg">
         <h2>Apa Kata Para Pelanggan Kami?</h2>
         <div className="card-outer-review">
-          {dataReviewPelanggan.map(( item ) => (
-            <Card key={item.id}>
+          {dataReviewPelanggan.map((item) => (
+            <Card key={item.id} variant="review" size="md">
               <InfoCard {...item} variant="review" />
             </Card>
           ))}
         </div>
+        <a href="">
+          <h3 className="button-link button-reviewgooglemaps">Review Google Maps <ArrowCircleUpRight size={16} /></h3>
+        </a>
+        <h3 className="linkpemesanan">Pemesanan melalui... <Button variant="primary" size="lg">Whatsapp<ArrowCircleUpRight size={16} /></Button></h3>
+      </div>
+
+      <div className="review-sm">
+        <div className="review-atas">
+          <h2>Apa Kata Para Pelanggan Kami?</h2>
+        </div>
+        <div className="review-bawah">
+          <div className="card-outer-review">
+            <Swiper
+              modules={[Pagination, Autoplay]}
+              pagination={{ clickable: true }}
+              centeredSlides={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              className="swiper-review"
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                  spaceBetween: 30
+                },
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 30
+                },
+                540: {
+                  slidesPerView: 1,
+                  spaceBetween: 30
+                },
+                680: {
+                  slidesPerView: 1,
+                  spaceBetween: 40
+                },
+              }}
+            >
+              {dataReviewPelanggan.map((item) => (
+                <SwiperSlide key={item.id}>
+                  <Card variant="review" size="md">
+                    <InfoCard {...item} variant="review" />
+                  </Card>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
+        <a href="">
+          <h3 className="button-link button-reviewgooglemaps">Review Google Maps <ArrowCircleUpRight size={16} /></h3>
+        </a>
+        <h3 className="linkpemesanan">Pemesanan melalui... <Button variant="primary" size="sm">Whatsapp<ArrowCircleUpRight size={16} /></Button></h3>
       </div>
     </>
   )
 }
 
-function InfoCard({ id, title, description, img, variant }: CardRequiredProps) {
+function InfoCard({ id, title, description, img, variant, stars }: CardRequiredProps) {
+
   return (
     <>
       {variant == 'review' && (<>
         <p>{description}</p>
         <img src={img} alt="" />
         <h3>{title}</h3>
-        <div className="card-stars"><Star size={16} /></div>
+        <div className="card-stars">{typeof stars === 'number' && Array.from({ length: stars }).map((count, i) => (
+          <Star weight="fill" color="#F77F00" key={i} size={16} />
+        ))}</div>
       </>)}
 
       {variant == 'pemesanan' && (<>

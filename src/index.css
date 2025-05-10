@@ -59,6 +59,7 @@ nav ul a {
 .button {
     display: flex;
     align-items: center;
+    color: var(--blackColor);
 }
 
 .button-primary {
@@ -114,7 +115,7 @@ nav ul a {
     }
 
     nav ul.appear {
-        max-height: 500px; 
+        max-height: 500px;
         opacity: 1;
         transition: all 0.4s ease;
     }
@@ -234,7 +235,7 @@ div.grid-judul h2 {
     .paragraf-judul-lg {
         display: none;
     }
-    
+
     .paragraf-judul-sm {
         display: flex;
         padding: 10px 0px;
@@ -385,7 +386,7 @@ div.card-daftarmotor {
     gap: 14px;
     background-color: var(--tertiaryColor);
     width: 300px;
-    height: 360px; 
+    height: 360px;
     box-shadow: 3px 6px 10px rgba(129, 129, 129, 0.25);
 }
 
@@ -444,7 +445,7 @@ div.buttonwhatsapp {
 
 
 @media only screen and (max-width: 480px) {
-    
+
     div.daftarmotor-atas {
         gap: 1.6rem;
     }
@@ -453,7 +454,7 @@ div.buttonwhatsapp {
         text-align: center;
         font-size: 2rem;
     }
-    
+
     div.daftarmotor-atas p {
         display: flex;
         flex-direction: column;
@@ -465,7 +466,15 @@ div.buttonwhatsapp {
 
     div.daftarmotor-bawah {
         gap: 4.4rem;
-        padding: 3.7rem 2rem 3.7rem 2rem;
+        padding: 3.7rem 2rem 0rem 2rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    div.daftarmotor-bawah {
+        gap: 4.4rem;
+        padding: 3.7rem 1rem 0rem 1rem;
     }
 }
 
@@ -486,6 +495,10 @@ div.prosespemesanan {
 div.prosespemesanan h2 {
     font-size: 2.8rem;
     font-weight: 400;
+}
+
+div.card-outer-prosespemesanan img {
+    min-height: 14rem;
 }
 
 div.card-outer-prosespemesanan {
@@ -519,14 +532,6 @@ div.card-pemesanan h3 {
 div.card-pemesanan p {
     font-size: 1.2rem;
     text-align: center;
-}
-
-div.prosespemesanan h3.button-syaratketentuan {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    text-decoration: underline;
-    color: var(--tertiaryColor);
 }
 
 div.prosespemesanan a {
@@ -576,7 +581,209 @@ div.prosespemesanan a {
     }
 }
 
+/* content-review */
+
+div.review-lg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6.4rem;
+    padding: 6rem 0rem;
+}
+
+div.review-sm {
+    display: none;
+}
+
+div.card-outer-review {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2.3rem;
+}
+
+div.card-outer-review img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+div.card-review {
+    text-align: center;
+    display: flex;
+    padding: 2.4rem 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 35rem;
+    height: 40rem;
+    border-radius: 1.4rem;
+    border-style: none;
+    background-color: var(--tertiaryColor);
+}
+
+div.card-review p {
+    display: flex;
+    align-items: center;
+    width: auto;
+    min-height: 11rem;
+    font-size: 1.2rem;
+}
+
+div.card-stars {
+    display: flex;
+    flex-direction: row;
+}
+
+h3.button-reviewgooglemaps {
+    color: var(--blackColor) !important;
+}
+
+h3.linkpemesanan {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0rem;
+}
+
+
+@media only screen and (max-width: 740px) {
+
+    div.review-lg {
+        display: none;
+    }
+
+    div.review-sm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3.2rem;
+        padding: 6rem 4rem 4rem 4rem;
+    }
+
+    div.review-bawah {
+        width: 100%;
+    }
+
+    div.card-outer-review {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2.3rem;
+    }
+
+    div.card-review {
+        width: 30rem;
+        height: 34rem;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    div.review-lg {
+        display: none;
+    }
+
+    div.review-sm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 6rem 2rem 2rem 2rem;
+        gap: 1rem;
+    }
+
+    div.review-bawah {
+        width: 100%;
+    }
+
+    div.card-outer-review {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2.3rem;
+    }
+
+    div.card-review {
+        width: 30rem;
+        height: 34rem;
+    }
+
+}
+
+.swiper-review {
+    --swiper-pagination-color: var(--quaternaryColor);
+}
+
+.swiper-kelebihan {
+    --swiper-scrollbar-drag-bg-color: var(--tertiaryColor);
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
 
+
+
+
+
+
+
+
+
+.card-outer {
+    height: 400px;
+}
+
+@media only screen and (max-width: 740px) {
+
+    .card-outer {
+        height: 375px;
+    }
+
+    .card-outer-review {
+        height: 475px;
+    }
+
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    .card-outer {
+        height: 350px;
+    }
+
+    .card-outer-pemesanan {
+        height: auto;
+    }
+
+    .card-outer-review {
+        height: 450px;
+    }
+
+}
+
+
+
+h3.button-link {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    text-decoration: underline;
+    color: var(--tertiaryColor);
+}

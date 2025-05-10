@@ -12,7 +12,7 @@ const Button = ({
     children,
 }: ButtonWhatsappProps) => {
     const className = `button button-${variant} button-size-${size}`;
-    return <button className={className}>{children}</button>
+    return <a href="https://wa.me/6281227454993?text=Mau%20sewa%20motor%20min"><div><button className={className}>{children}</button></div></a>;
 }
 
 export default Button;
