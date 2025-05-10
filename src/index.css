@@ -317,7 +317,7 @@ div.card-kelebihan p {
 @media only screen and (max-width: 480px) {
 
     div.grid-kelebihan-atas h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     div.grid-kelebihan {
@@ -573,7 +573,7 @@ div.prosespemesanan a {
     }
 
     div.prosespemesanan h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     div.card-pemesanan h3 {
@@ -690,6 +690,10 @@ h3.linkpemesanan {
 
     div.review-lg {
         display: none;
+    }
+
+    div.review-sm h2 {
+        font-size: 2rem;
     }
 
     div.review-sm {

@@ -454,7 +454,7 @@ function ContentReview() {
             </Swiper>
           </div>
         </div>
-        <a href="">
+        <a href="https://maps.app.goo.gl/3jADKew7QAU7Zu5dA">
           <h3 className="button-link button-reviewgooglemaps">Review Google Maps <ArrowCircleUpRight size={16} /></h3>
         </a>
         <h3 className="linkpemesanan">Pemesanan melalui... <Button variant="primary" size="sm">Whatsapp<ArrowCircleUpRight size={16} /></Button></h3>
