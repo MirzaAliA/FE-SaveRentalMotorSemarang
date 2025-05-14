@@ -434,8 +434,13 @@ div.desc-motor p {
     width: 250px;
 }
 
-div.buttonwhatsapp {
+div.buttonwhatsapp-sm {
     margin: 0rem 1.9rem 1rem auto;
+}
+
+div.buttonwhatsapp-x-sm {
+    margin: 0rem 1.9rem 1rem auto;
+    display: none;
 }
 
 @media only screen and (max-width: 1150px) {
@@ -527,10 +532,6 @@ div.buttonwhatsapp {
         margin-top: 0.8rem;
         font-size: 1.2rem;
         width: 167px;
-    }
-
-    div.buttonwhatsapp {
-        margin: 0rem 1.9rem 1rem auto;
     }
 
     div.card-daftarmotor p.tahun-motor {
@@ -1117,4 +1118,15 @@ h3.button-link {
     padding: 11px 27px;
     border-radius: 28px;
     font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 320px) {
+    div.buttonwhatsapp-sm {
+        display: none;
+    }
+
+    div.buttonwhatsapp-x-sm {
+        display: flex;
+    }
+
 }

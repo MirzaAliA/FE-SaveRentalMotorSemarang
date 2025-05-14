@@ -567,7 +567,10 @@ function CardDaftarMotor({ itemDaftarMotor }: CardDaftarMotorProps) {
           <h3>{itemDaftarMotor.titleMotor}</h3>
           <p>{itemDaftarMotor.hargaMotor}k/hari <br></br> Helm {itemDaftarMotor.fasilitas.jumlahHelm} Jas Hujan {itemDaftarMotor.fasilitas.jumlahJasHujan}</p>
         </div>
-        <div className="buttonwhatsapp">
+        <div className="buttonwhatsapp-sm">
+          <Button variant="primary" size="sm">Whatsapp<ArrowCircleUpRight size={10} /></Button>
+        </div>
+        <div className="buttonwhatsapp-x-sm">
           <Button variant="primary" size="x-sm">Whatsapp<ArrowCircleUpRight size={10} /></Button>
         </div>
       </div>
