@@ -56,37 +56,6 @@ nav ul a {
     color: var(--blackColor);
 }
 
-.button {
-    display: flex;
-    align-items: center;
-    color: var(--blackColor);
-}
-
-.button-primary {
-    background-color: var(--secondaryColor);
-}
-
-.button-size-sm {
-    gap: 3px;
-    padding: 8px 17px;
-    border-radius: 28px;
-    font-size: 1.2rem;
-}
-
-.button-size-md {
-    gap: 3px;
-    padding: 8.6px 18px;
-    border-radius: 28px;
-    font-size: 1.4rem;
-}
-
-.button-size-lg {
-    gap: 3px;
-    padding: 11px 27px;
-    border-radius: 28px;
-    font-size: 1.6rem;
-}
-
 .menu-icon {
     display: none;
 }
@@ -145,6 +114,17 @@ nav ul a {
     .navbar-button-hamburg {
         display: none;
     }
+}
+
+@media only screen and (max-width: 320px) {
+
+    nav.navbar {
+        padding: 18px auto;
+    }
+
+    nav ul {
+    gap: 36px;
+}
 }
 
 /* Content-Judul */
@@ -269,6 +249,7 @@ div.grid-kelebihan {
 
 div.grid-kelebihan-atas h2 {
     font-size: 2.4rem;
+    text-align: center;
     font-weight: 400;
     color: var(--tertiaryColor);
 }
@@ -318,6 +299,7 @@ div.card-kelebihan p {
 
     div.grid-kelebihan-atas h2 {
         font-size: 2rem;
+        text-align: center;
     }
 
     div.grid-kelebihan {
@@ -329,6 +311,34 @@ div.card-kelebihan p {
         width: 250px;
         height: 291px;
         padding: 0rem 2.6rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    div.grid-kelebihan-atas h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    div.grid-kelebihan {
+        padding: 6rem 4rem 4rem 4rem;
+    }
+
+    div.card-kelebihan {
+        text-align: center;
+        width: 225px;
+        height: 262px;
+        padding: 0rem 2rem;
+    }
+
+    div.card-kelebihan h3 {
+        font-size: 1.6rem;
+        padding: 10px 0px;
+    }
+
+    div.card-kelebihan p {
+        font-size: 1rem;
     }
 }
 
@@ -410,6 +420,7 @@ div.image-motor img {
 
 div.desc-motor {
     width: 250px;
+    max-width: 250px;
 }
 
 div.desc-motor h3 {
@@ -432,6 +443,14 @@ div.buttonwhatsapp {
     div.daftarmotor-bawah {
         gap: 4.4rem;
         padding: 3.7rem 8rem 3.7rem 8rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    div.daftarmotor-bawah {
+        gap: 4.4rem;
+        padding: 3.7rem 4rem 3.7rem 4rem;
     }
 }
 
@@ -476,6 +495,50 @@ div.buttonwhatsapp {
         gap: 4.4rem;
         padding: 3.7rem 1rem 0rem 1rem;
     }
+
+    div.card-daftarmotor {
+        width: 200px;
+        height: 240px;
+    }
+
+    div.image-motor {
+        width: 200px;
+        height: 133px;
+    }
+
+    div.image-motor img {
+        width: 75px;
+        height: auto;
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    div.desc-motor {
+        width: 167px;
+        max-width: 167px;
+    }
+
+    div.desc-motor h3 {
+        font-size: 1.4rem;
+        width: 167px;
+    }
+
+    div.desc-motor p {
+        margin-top: 0.8rem;
+        font-size: 1.2rem;
+        width: 167px;
+    }
+
+    div.buttonwhatsapp {
+        margin: 0rem 1.9rem 1rem auto;
+    }
+
+    div.card-daftarmotor p.tahun-motor {
+        font-size: 0.8rem;
+        position: absolute;
+        margin: auto -130px -75px auto;
+    }
+
 }
 
 /* Content-ProsesPemesanan */
@@ -495,6 +558,7 @@ div.prosespemesanan {
 div.prosespemesanan h2 {
     font-size: 2.8rem;
     font-weight: 400;
+    text-align: center;
 }
 
 div.card-outer-prosespemesanan img {
@@ -551,6 +615,7 @@ div.prosespemesanan a {
 
     div.prosespemesanan h2 {
         font-size: 2.2rem;
+        text-align: center;
     }
 }
 
@@ -574,11 +639,21 @@ div.prosespemesanan a {
 
     div.prosespemesanan h2 {
         font-size: 2rem;
+        text-align: center;
     }
 
     div.card-pemesanan h3 {
         padding: 20px 0px 14px 0px;
     }
+}
+
+@media only screen and (max-width: 480px) {
+
+    div.prosespemesanan h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
 }
 
 /* content-review */
@@ -694,6 +769,7 @@ h3.linkpemesanan {
 
     div.review-sm h2 {
         font-size: 2rem;
+        text-align: center;
     }
 
     div.review-sm {
@@ -724,6 +800,15 @@ h3.linkpemesanan {
 
 }
 
+@media only screen and (max-width: 480px) {
+
+    div.review-sm h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+}
+
 .swiper-review {
     --swiper-pagination-color: var(--quaternaryColor);
 }
@@ -738,16 +823,204 @@ h3.linkpemesanan {
     align-items: center;
 }
 
+/* footer */
+
+/* maps */
+.maps-outer {
+    position: relative;
+    width: 500px;
+    height: auto;
+}
+
+.maps-inner {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+}
+
+.iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+div.footer {
+    background-color: var(--primaryAccsent);
+    padding: 6rem 9.8rem 3rem 9.8rem;
+    color: var(--tertiaryColor);
+}
+
+div.footer-container {
+    display: flex;
+    flex-direction: row;
+    gap: 4.5rem;
+    padding: 0 0 4.8rem 0;
+}
+
+div.footer-kanan {
+    display: flex;
+    flex-direction: column;
+    gap: 2.6rem;
+}
+
+div.footer-kanan-judul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+div.footer-kanan-judul h2 {
+    font-size: 2.4rem;
+}
+
+div.footer-kanan-judul p {
+    font-size: 1.2rem;
+}
+
+div.footer-kanan-kontak {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+div.footer-kanan-kontak h3 {
+    font-size: 2rem;
+}
+
+div.footer-kontak-logo {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+}
+
+div.footer-kontak-logo a {
+    color: var(--tertiaryColor);
+}
+
+ul.footer-quiclinks-ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+div.footer-kanan-quicklinks h3 {
+    font-size: 2rem;
+}
+
+div.footer-kanan-quicklinks {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+li.footer-quicklinks a {
+    list-style: none;
+    text-decoration: none;
+    color: var(--tertiaryColor);
+    font-size: 1.4rem;
+}
+
+hr.line-footer {
+    border: 1px solid var(--tertiaryColor);
+}
+
+div.footer-bawah p {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    text-align: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 1150px) {
+
+    .maps-outer {
+        width: 400px;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+
+    .maps-outer {
+        width: 400px;
+    }
+
+    div.footer-container {
+        flex-wrap: wrap-reverse;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    div.footer {
+        padding: 5rem 6rem 3rem 6rem;
+    }
+
+}
+
+@media only screen and (max-width: 740px) {
+
+    div.footer-kiri {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .maps-outer {
+        position: relative;
+        width: 300px;
+        height: auto;
+    }
+
+    div.footer {
+        padding: 5rem 3rem 3rem 3rem;
+    }
+
+    div.footer-container {
+        flex-wrap: wrap-reverse;
+        gap: 2rem;
+        justify-content: center;
+    }
+}
 
 
+@media only screen and (max-width: 480px) {
+
+    div.footer-kiri {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .maps-outer {
+        position: relative;
+        width: 300px;
+        height: auto;
+    }
+
+    div.footer-container {
+        flex-wrap: wrap-reverse;
+        gap: 2rem;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    .maps-outer {
+        width: 250px;
+    }
+
+}
 
 
-
-
-
-
-
-
+/* konfigurasi card */
 
 .card-outer {
     height: 400px;
@@ -757,6 +1030,10 @@ h3.linkpemesanan {
 
     .card-outer {
         height: 375px;
+    }
+
+    .card-outer-kelebihan {
+        height: 400px !important;
     }
 
     .card-outer-review {
@@ -780,9 +1057,19 @@ h3.linkpemesanan {
         height: 450px;
     }
 
+    .card-outer-kelebihan {
+        height: 325px !important;
+    }
+
 }
 
+@media only screen and (max-width: 320px) {
 
+    .card-outer-kelebihan {
+        height: 300px !important;
+    }
+
+}
 
 h3.button-link {
     display: flex;
@@ -790,4 +1077,44 @@ h3.button-link {
     gap: 1rem;
     text-decoration: underline;
     color: var(--tertiaryColor);
+}
+
+/* button */
+
+.button {
+    display: flex;
+    align-items: center;
+    color: var(--blackColor);
+}
+
+.button-primary {
+    background-color: var(--secondaryColor);
+}
+
+.button-size-x-sm {
+    gap: 3px;
+    padding: 6px 12px;
+    border-radius: 28px;
+    font-size: 0.8rem;
+}
+
+.button-size-sm {
+    gap: 3px;
+    padding: 8px 17px;
+    border-radius: 28px;
+    font-size: 1.2rem;
+}
+
+.button-size-md {
+    gap: 3px;
+    padding: 8.6px 18px;
+    border-radius: 28px;
+    font-size: 1.4rem;
+}
+
+.button-size-lg {
+    gap: 3px;
+    padding: 11px 27px;
+    border-radius: 28px;
+    font-size: 1.6rem;
 }

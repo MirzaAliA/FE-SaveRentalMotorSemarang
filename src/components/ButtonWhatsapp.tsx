@@ -2,7 +2,7 @@ import "../index.css"
 
 type ButtonWhatsappProps = {
     variant?: 'primary' | 'secondary';
-    size?: 'sm' | 'md' | 'lg';
+    size?: 'x-sm' | 'sm' | 'md' | 'lg';
     children: React.ReactNode;
 }
 

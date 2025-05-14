@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { List, X, ArrowCircleUpRight, Star } from "@phosphor-icons/react";
+import { List, X, ArrowCircleUpRight, Star, WhatsappLogo, InstagramLogo, Envelope, Heart } from "@phosphor-icons/react";
 import "./index.css"
 import Button from "./components/ButtonWhatsapp";
 import Card from "./components/Card";
@@ -217,6 +217,7 @@ export default function App() {
     <ContentDaftarMotor />
     <ContentProsesPemesanan />
     <ContentReview />
+    <Footer />
   </>)
 }
 
@@ -312,15 +313,15 @@ function ContentKelebihan() {
             breakpoints={{
               0: {
                 slidesPerView: 0.5,
-                spaceBetween: 40
+                spaceBetween: 40,
               },
               320: {
                 slidesPerView: 1,
-                spaceBetween: 40
+                spaceBetween: 40,
               },
               540: {
                 slidesPerView: 1.5,
-                spaceBetween: 40
+                spaceBetween: 40,
               },
               870: {
                 slidesPerView: 2,
@@ -463,6 +464,68 @@ function ContentReview() {
   )
 }
 
+function Footer() {
+  return (
+    <>
+      <div className="footer">
+        <div className="footer-container">
+          <div className="footer-kiri">
+            <div className="maps-outer">
+              <div className="maps-inner">
+                <iframe className="iframe" loading="lazy" src="https://maps.google.com/maps?q=save+rental+motor&output=embed"></iframe>
+              </div>
+            </div>
+          </div>
+          <div className="footer-kanan">
+            <div className="footer-kanan-judul">
+              <h2>Save Rental Motor Semarang</h2>
+              <p>Sejak berdiri pada tahun 2015, rental motor kami telah menjadi pilihan terpercaya
+                bagi wisatawan, pekerja maupun mahasiswa yang mencari layanan sewa motor yang aman,
+                nyaman, dan terjangkau.
+              </p>
+            </div>
+            <div className="footer-kanan-kontak">
+              <h3>Kontak</h3>
+              <div className="footer-kontak-logo">
+                <a href="">
+                  <WhatsappLogo size={28} />
+                </a>
+                <a href="">
+                  <InstagramLogo size={28} />
+                </a>
+                <a href="">
+                  <Envelope size={28} />
+                </a>
+              </div>
+            </div>
+            <div className="footer-kanan-quicklinks">
+              <h3>Quick Links</h3>
+              <ul className="footer-quiclinks-ul">
+                <li className="footer-quicklinks">
+                  <a href="#">Home</a>
+                </li>
+                <li className="footer-quicklinks">
+                  <a href="#daftar-motor">Daftar Motor</a>
+                </li>
+                <li className="footer-quicklinks">
+                  <a href="">Syarat Rental</a>
+                </li>
+                <li className="footer-quicklinks">
+                  <a href="">FAQ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="footer-bawah">
+          <hr className="line-footer" />
+          <p className="creator">Created with&ensp; <Heart size={12} fill="red" /> &ensp;by Mirza Ali Abhipraya</p>
+        </div>
+      </div>
+    </>
+  )
+}
+
 function InfoCard({ id, title, description, img, variant, stars }: CardRequiredProps) {
 
   return (
@@ -505,7 +568,7 @@ function CardDaftarMotor({ itemDaftarMotor }: CardDaftarMotorProps) {
           <p>{itemDaftarMotor.hargaMotor}k/hari <br></br> Helm {itemDaftarMotor.fasilitas.jumlahHelm} Jas Hujan {itemDaftarMotor.fasilitas.jumlahJasHujan}</p>
         </div>
         <div className="buttonwhatsapp">
-          <Button variant="primary" size="sm">Whatsapp<ArrowCircleUpRight size={16} /></Button>
+          <Button variant="primary" size="x-sm">Whatsapp<ArrowCircleUpRight size={10} /></Button>
         </div>
       </div>
     </>
