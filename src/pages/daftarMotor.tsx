@@ -20,7 +20,7 @@ export default function ContentDaftarMotor() {
                 </div>
 
                 <div className="button-link button-daftarmotor">
-                    <Link to="/daftar-motor">
+                    <Link to="/syarat-rental">
                         Syarat Rental
                         <ArrowCircleUpRight size={16} />
                     </Link>
