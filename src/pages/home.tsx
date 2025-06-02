@@ -170,7 +170,7 @@ function ContentProsesPemesanan() {
                         </Card>
                     ))}
                 </div>
-                <div className="button-link button-daftarmotor">
+                <div className="button-link button-daftarmotor button-pemesanan">
                     <Link to="/syarat-rental">
                         Syarat dan Ketentuan Rental
                         <ArrowCircleUpRight size={16} />

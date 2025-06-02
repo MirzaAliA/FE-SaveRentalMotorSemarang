@@ -625,6 +625,10 @@ div.prosespemesanan a {
     text-decoration: none;
 }
 
+div.button-pemesanan a {
+    color: var(--whiteColor);
+}
+
 @media only screen and (max-width: 740px) {
 
     div.card-outer-prosespemesanan {
